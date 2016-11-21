@@ -4,16 +4,33 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "live-server app"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/melonmanchan/smart-home-web-mockup.git"
+    "url": "git+https://github.com/melonmanchan/smart-home-web-mockup.git",
+    "type": "git"
   },
-  "author": "",
+  "author": "Matti Jokitulppo <melonmanchan@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/melonmanchan/smart-home-web-mockup/issues"
   },
-  "homepage": "https://github.com/melonmanchan/smart-home-web-mockup#readme"
+  "homepage": "https://github.com/melonmanchan/smart-home-web-mockup#readme",
+  "dependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "browser-sync": "^2.18.2",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "live-server": "^1.1.0",
+    "minimist": "^1.2.0"
+  }
 }
