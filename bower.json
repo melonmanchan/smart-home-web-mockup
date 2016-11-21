@@ -1,0 +1,17 @@
+{
+  "name": "smart-home-web-mockup",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Matti Jokitulppo <melonmanchan@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/melonmanchan/smart-home-web-mockup",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
