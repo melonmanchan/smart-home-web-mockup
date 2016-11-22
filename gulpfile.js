@@ -45,10 +45,11 @@ gulp.task('js', function () {
  });
 
 gulp.task('scss', function () {
-    return gulp.src(['./app/scss/*',
+    return gulp.src([
+        './app/scss/*',
         './bower_components/html5-boilerplate/dist/css/*.css',
         './bower_components/material-design-lite/material.css'
-    ])
+        ])
         .pipe(sass())
        .pipe(gulpif(options.env !== 'development', minifyCSS()))
        .pipe(concat('app.css'))

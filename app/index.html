@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Smart Home Mockup</title>
-	<link type="text/css" href="./css/app.css" rel="stylesheet">
-	<link type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script type="text/javascript" defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-    <script type="text/javascript" src="./js/dist.js"></script>
-</head>
-<body>
-    <h1>Hello world</h1>
-</body>
+    <head>
+        <title>Smart Home Mockup</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" href="./css/app.css" rel="stylesheet">
+        <link type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script type="text/javascript" defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+        <script type="text/javascript" src="./js/dist.js"></script>
+    </head>
+    <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+                <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+                    <a href="#main" class="mdl-layout__tab is-active">Main</a>
+                    <a href="#kitchen" class="mdl-layout__tab">Kitchen</a>
+                    <a href="#livingroom" class="mdl-layout__tab">Living ROom</a>
+                    <a href="#restroom" class="mdl-layout__tab">Restroom</a>
+                </div>
+            </header>
+            <main class="mdl-layout__content">
+                <div class="mdl-layout__tab-panel is-active" id="main"></div>
+                <div class="mdl-layout__tab-panel" id="kitchen">kit</div>
+                <div class="mdl-layout__tab-panel" id="livingroom">Living</div>
+                <div class="mdl-layout__tab-panel" id="restroom">Rest</div>
+            </main>
+        </div>
+    </body>
 </html>
