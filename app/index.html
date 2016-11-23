@@ -14,14 +14,13 @@
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
                 <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-                    <a href="#main" class="mdl-layout__tab">Main</a>
                     <a href="#kitchen" class="mdl-layout__tab is-active">Kitchen</a>
                     <a href="#livingroom" class="mdl-layout__tab">Living Room</a>
                     <a href="#restroom" class="mdl-layout__tab">Restroom</a>
                 </div>
             </header>
             <main class="mdl-layout__content mdl-grid">
-                <div class="mdl-layout__tab-panel" id="main"></div>
+
                 <div class="mdl-layout__tab-panel is-active" id="kitchen">
                     <div class="lights card-component kitchen-light-card mdl-card">
                         <div class="mdl-card__title lights-wrapper">
@@ -34,8 +33,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="mdl-layout__tab-panel" id="livingroom">Living</div>
-                <div class="mdl-layout__tab-panel" id="restroom">Rest</div>
+                <div class="mdl-layout__tab-panel" id="livingroom">
+                    <div class="lights card-component livingroom-light-card mdl-card">
+                        <div class="mdl-card__title lights-wrapper">
+                            <h2 class="mdl-card__title-text light-heading">Lights</h2>
+                            <h2 class="mdl-card__title-text livingroom-light percentage">50%</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <input class="mdl-slider mdl-js-slider light-slider" data-room="livingroom-light" type="range"
+                            min="0" max="100">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mdl-layout__tab-panel" id="restroom">
+                    <div class="lights card-component restroom-light-card mdl-card">
+                        <div class="mdl-card__title lights-wrapper">
+                            <h2 class="mdl-card__title-text light-heading">Lights</h2>
+                            <h2 class="mdl-card__title-text restroom-light percentage">50%</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <input class="mdl-slider mdl-js-slider light-slider" data-room="restroom-light" type="range"
+                            min="0" max="100">
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
     </body>
