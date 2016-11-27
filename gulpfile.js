@@ -33,7 +33,10 @@ gulp.task('default', ['js', 'scss', 'html'],  function () { });
 
 gulp.task('js', function () {
     return gulp.src(
-        [ './app/js/**/*.js'])
+        [
+            './app/js/util.js',
+            './app/js/**/*.js'
+        ])
         .pipe(babel({
             presets: ['es2015']
         }))
