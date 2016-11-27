@@ -6,29 +6,52 @@ $(document).ready(function () {
     var plusButton = $('#kitchen .plus-button');
     var negButton = $('#kitchen .neg-button');
 
-    plusButton.on('click', function(event) {
+    var plusButtonTimeout = Math.ceil(Math.random() * 10000);
+    var negButtonTimeout = Math.ceil(Math.random() * 10000);
+
+    var posClick = function() {
         if (currentGauge >= 1) return;
         currentGauge += 0.05
         gauge.value(currentGauge);
 
         if (currentGauge >= 1)  {
-            $(this).attr('disabled', true);
+            plusButton.attr('disabled', true);
+            clearInterval(plusButtonTimeout);
         } else {
             negButton.attr('disabled', false);
         }
-    });
+    }
 
-    negButton.on('click', function(event) {
+    var negClick = function() {
         if (currentGauge <= 0) return;
 
         currentGauge -= 0.05
         gauge.value(currentGauge);
 
         if (currentGauge <= 0)  {
-            $(this).attr('disabled', true);
+            negButton.attr('disabled', true);
+            clearInterval(negButtonTimeout);
         } else {
             plusButton.attr('disabled', false);
         }
+    }
 
+    plusButton.on('mousedown', function(e) {
+        posClick();
+        plusButtonTimeout = setInterval(posClick, 500);
+
+        return false;
+    }).on('mouseup mouseleave', function() {
+        clearInterval(plusButtonTimeout);
     });
+
+    negButton.on('mousedown', function(e) {
+        negClick();
+        negButtonTimeout = setInterval(negClick, 500);
+
+        return false;
+    }).on('mouseup mouseleave', function() {
+        clearInterval(negButtonTimeout);
+    });
+
 });
