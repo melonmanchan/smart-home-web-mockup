@@ -14,6 +14,7 @@
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
                 <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+                    <a href="#alfred" class="mdl-layout__tab">Alfred</a>
                     <a href="#kitchen" class="mdl-layout__tab is-active">Kitchen</a>
                     <a href="#livingroom" class="mdl-layout__tab">Living Room</a>
                     <a href="#restroom" class="mdl-layout__tab">Restroom</a>
@@ -21,6 +22,11 @@
             </header>
             <main class="mdl-layout__content mdl-grid">
 
+                <!-- Alfred -->
+                <div class="mdl-layout__tab-panel" id="alfred">
+                </div>
+
+                <!-- Kitchen -->
                 <div class="mdl-layout__tab-panel is-active" id="kitchen">
                     <div class="lights card-component kitchen-light-card mdl-card">
                         <div class="mdl-card__title lights-wrapper">
@@ -32,7 +38,39 @@
                             min="0" max="100">
                         </div>
                     </div>
+
+                    <div class="mdl-card temperature-card card-component">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Temperature</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <div class="gauge gauge--liveupdate" id="kitchenTemp">
+                                <div class="gauge__container">
+                                    <div class="gauge__marker"></div>
+                                    <div class="gauge__background"></div>
+                                    <div class="gauge__center"></div>
+                                    <div class="gauge__data"></div>
+                                    <div class="gauge__needle"></div>
+                                </div>
+                                <div class="gauge__labels mdl-typography__headline">
+                                    <span class="gauge__label--low">
+                                        <button class="neg-button mdl-button mdl-js-button mdl-button--icon">
+                                            <i class="material-icons">remove</i>
+                                        </button>
+                                    </span>
+                                    <span class="gauge__label--spacer"></span>
+                                    <span class="gauge__label--high">
+                                        <button class="plus-button mdl-button mdl-js-button mdl-button--icon">
+                                            <i class="material-icons">add</i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Livingroom -->
                 <div class="mdl-layout__tab-panel" id="livingroom">
                     <div class="lights card-component livingroom-light-card mdl-card">
                         <div class="mdl-card__title lights-wrapper">
@@ -46,6 +84,7 @@
                     </div>
                 </div>
 
+                <!-- Restroom -->
                 <div class="mdl-layout__tab-panel" id="restroom">
                     <div class="lights card-component restroom-light-card mdl-card">
                         <div class="mdl-card__title lights-wrapper">
